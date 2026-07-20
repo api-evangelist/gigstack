@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.gigstack.io/welcome-to-gigstack-api-1385870m0
+docs: https://docs.gigstack.io/
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  bearer_format: JWT
+  api_key_in: [header]
+  oauth2_flows: []
+  notes: >-
+    gigstack API v2 authenticates with a Bearer JWT token passed in the
+    Authorization header. Tokens are issued per team from the dashboard at
+    app.gigstack.pro/settings > API. There is no OAuth authorization-code
+    surface; the token is a long-lived API key presented as a bearer credential.
+    Test vs live is distinguished by the key itself (livemode flag on responses
+    and webhook events), not by a separate base URL.
+schemes:
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+    location: header
+    header: Authorization
+    format: 'Authorization: Bearer <JWT_TOKEN>'
+    token_source: https://app.gigstack.pro/settings?subtab=api
+    sources: [docs.gigstack.io]
+multi_team:
+  parameter: team
+  description: >-
+    Requests may target a specific team via a `team` parameter, allowing a
+    single token holder to manage resources across multiple teams (gigstack
+    Connect / agency model).
+legacy:
+  v1:
+    scheme: apiKey
+    header: X-API-Key
+    status: deprecated
+    note: >-
+      API v1 (https://gigstack-cfdi-bjekv7t4.uc.gateway.dev/v1) used an X-API-Key
+      header. v2 replaces this with Authorization: Bearer JWT.
