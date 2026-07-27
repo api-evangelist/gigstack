@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: derived
+source: https://docs.gigstack.io/
+note: >-
+  Standards conformance derived from the documented gigstack API v2 surface
+  (auth, pagination, error model, webhooks) and the product's regulatory domain
+  (Mexican CFDI 4.0 / SAT). No security-compliance certifications (SOC 2, ISO
+  27001, PCI, HIPAA) are published, so no `Compliance` pointer is emitted.
+standards:
+  - id: cfdi-4.0
+    conforms: true
+    evidence: >-
+      Issues CFDI 4.0 compliant fiscal invoices (income/egress/payment-complement)
+      via the SAT/PAC stamping pipeline; SAT catalogs (Uso CFDI, Regimen Fiscal,
+      Forma de Pago, Metodo de Pago) exposed as API catalogs.
+  - id: sat-compliance
+    conforms: true
+    evidence: RFC validation against SAT lists, descarga masiva SAT, conciliacion SAT.
+  - id: idempotency
+    conforms: true
+    evidence: idempotency_key parameter on payment creation
+  - id: cursor-pagination
+    conforms: true
+    evidence: list responses expose next / has_more / total_results
+  - id: webhooks
+    conforms: true
+    evidence: documented event catalog with POST delivery and livemode flag
+  - id: oauth2
+    conforms: false
+    evidence: bearer JWT API-key model, no OAuth authorization-code flow
+  - id: openid-connect
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: errors use a custom {message, error} envelope, not application/problem+json
+  - id: rfc8594-sunset-header
+    conforms: false
+    evidence: v1 deprecation documented in guide but no Sunset header advertised
+  - id: asyncapi
+    conforms: false
+    evidence: webhooks documented but no AsyncAPI document published

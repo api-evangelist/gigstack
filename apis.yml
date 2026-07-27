@@ -1,25 +1,147 @@
 aid: gigstack
 name: Gigstack
-description: Gigstack is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Gigstack (gigstack.pro) is a Mexican fintech and revenue-automation platform
+  that automates electronic invoicing and tax compliance for businesses
+  operating in Mexico. It generates CFDI 4.0 fiscal invoices through the SAT/PAC
+  stamping pipeline, runs collections (cobranza) and accounts-receivable
+  workflows, offers self-invoicing (autofactura) and customer portals, and
+  performs automated SAT reconciliation and bulk SAT downloads (descarga
+  masiva). Its REST API (v2, https://api.gigstack.io/v2) exposes clients,
+  services, invoices (income/egress/draft/payment-complement), payments,
+  receipts, retentions, teams, users, webhooks and SAT catalogs, with an
+  official CLI and MCP server for terminal and agent workflows. Backed by
+  500 Global.
 url: https://raw.githubusercontent.com/api-evangelist/gigstack/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: enrichment-pipeline
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
+image: https://gigstack.pro/images/webclip.png
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Fintech
+- Invoicing
+- CFDI
+- SAT
+- Tax Compliance
+- Payments
+- Billing
+- Collections
+- Mexico
+- Accounts Receivable
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Gigstack API
+  description: >-
+    gigstack API v2 — REST API for CFDI 4.0 invoicing, payments, collections,
+    clients, services, receipts, retentions, webhooks and SAT catalogs in
+    Mexico. Bearer JWT authentication; cursor pagination; standardized
+    {message, data} response envelope.
+  humanURL: https://docs.gigstack.io/
+  baseURL: https://api.gigstack.io/v2
+  version: v2
+  properties:
+  - type: Documentation
+    url: https://docs.gigstack.io/
+  - type: APIReference
+    url: https://docs.gigstack.io/
+  - type: LLMsTxt
+    url: llms/gigstack-llms.txt
 common:
+- type: DomainSecurity
+  url: security/gigstack-domain-security.yml
 - type: Website
   url: https://gigstack.pro
+- type: DeveloperPortal
+  url: https://app.gigstack.pro
+- type: Documentation
+  url: https://docs.gigstack.io/
+- type: APIReference
+  url: https://docs.gigstack.io/
+- type: GettingStarted
+  url: https://docs.gigstack.io/welcome-to-gigstack-api-1385870m0
+- type: Blog
+  url: https://blog.gigstack.pro/
+- type: HelpCenter
+  url: https://helpcenter.gigstack.pro/
+- type: Support
+  url: mailto:hola@gigstack.pro
+- type: SignUp
+  url: https://app.gigstack.pro/register
+- type: Login
+  url: https://app.gigstack.pro/login
+- type: TermsOfService
+  url: https://pro-gigstack.s3.us-east-2.amazonaws.com/legal/terms.pdf
+- type: PrivacyPolicy
+  url: https://pro-gigstack.s3.us-east-2.amazonaws.com/legal/privacy.pdf
+- type: GitHubOrganization
+  url: https://github.com/disruptive-learning
+- type: LLMsTxt
+  url: llms/gigstack-llms.txt
+  name: gigstack API llms.txt
+- type: Authentication
+  url: authentication/gigstack-authentication.yml
+  name: Authentication profile
+- type: Conventions
+  url: conventions/gigstack-conventions.yml
+  name: API conventions
+- type: Idempotency
+  url: conventions/gigstack-conventions.yml
+  name: Idempotency (idempotency_key on payments)
+- type: ErrorCatalog
+  url: errors/gigstack-error-codes.yml
+  name: Standardized error codes
+- type: Webhooks
+  url: asyncapi/gigstack-webhooks.yml
+  name: Webhook event catalog
+- type: Lifecycle
+  url: lifecycle/gigstack-lifecycle.yml
+  name: API lifecycle
+- type: Deprecation
+  url: lifecycle/gigstack-lifecycle.yml
+  name: v1 deprecation / migration policy
+- type: Packages
+  url: packages/gigstack-packages.yml
+  name: Published packages
+- type: MCPServer
+  url: mcp/gigstack-mcp.yml
+  name: Official gigstack MCP server
+- type: CLI
+  url: cli/gigstack-cli.yml
+  name: gigstack CLI
+- type: Sandbox
+  url: sandbox/gigstack-sandbox.yml
+  name: Test-mode / sandbox
+- type: Conformance
+  url: conformance/gigstack-conformance.yml
+  name: Standards conformance
+- type: Components
+  url: components/gigstack-components.yml
+  name: Hosted portals
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

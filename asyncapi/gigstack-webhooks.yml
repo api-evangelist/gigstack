@@ -1,0 +1,56 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.gigstack.io/webhooks-1862295m0
+docs: https://docs.gigstack.io/
+type: Webhooks
+spec_type: webhook-catalog
+transport: https
+delivery:
+  method: POST
+  expected_response: 2xx within 5 seconds
+  register_endpoint: POST /webhooks
+  manage_endpoints:
+    - 'GET /webhooks/{id}'
+    - 'PUT /webhooks/{id}'
+    - 'DELETE /webhooks/{id}'
+  register_fields:
+    required: [url, events]
+    optional: [description, status]
+envelope:
+  id: unique event identifier
+  type: event name (matches subscribed event)
+  created: unix timestamp in milliseconds
+  livemode: boolean (true production, false test)
+  data.object: full resource that triggered the event
+verification:
+  signature: none-documented
+  guidance:
+    - Verify requests originate from gigstack IP ranges
+    - Always use HTTPS URLs for production webhooks
+    - Validate event id for idempotent processing
+events:
+  - payment.created
+  - payment.updated
+  - payment.succeeded
+  - payment.canceled
+  - payment.deleted
+  - payment.upcoming_due_date
+  - invoice.created
+  - invoice.canceled
+  - invoice.failed
+  - receipt.created
+  - receipt.updated
+  - receipt.completed
+  - receipt.deleted
+  - customer.created
+  - customer.updated
+  - customer.deleted
+  - service.created
+  - service.updated
+  - service.deleted
+event_groups:
+  payment: [payment.created, payment.updated, payment.succeeded, payment.canceled, payment.deleted, payment.upcoming_due_date]
+  invoice: [invoice.created, invoice.canceled, invoice.failed]
+  receipt: [receipt.created, receipt.updated, receipt.completed, receipt.deleted]
+  customer: [customer.created, customer.updated, customer.deleted]
+  service: [service.created, service.updated, service.deleted]

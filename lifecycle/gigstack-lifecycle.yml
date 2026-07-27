@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.gigstack.io/migrar-de-api-v1-a-v2-de-gigstack-1644235m0
+docs: https://docs.gigstack.io/
+versioning:
+  scheme: uri-path
+  current: v2
+  base_url: https://api.gigstack.io/v2
+  previous: v1
+  previous_base_url: https://gigstack-cfdi-bjekv7t4.uc.gateway.dev/v1
+deprecation:
+  policy: >-
+    API v1 has entered maintenance mode (critical bug fixes only); it receives
+    no new features and will eventually be discontinued. The docs urge
+    "Migra lo antes posible" (migrate as soon as possible). A firm sunset date
+    is published as TBD.
+  policy_url: https://docs.gigstack.io/migrar-de-api-v1-a-v2-de-gigstack-1644235m0
+  sunset_header: false
+  sunset_date: null
+  deprecated_versions: [v1]
+  breaking_changes_v1_to_v2:
+    - Base URL moved to https://api.gigstack.io/v2
+    - Auth changed from X-API-Key header to Authorization Bearer JWT
+    - Responses wrapped in standardized {message, data} envelope
+    - /products endpoint renamed to /services
+    - Pagination changed from offset/limit to cursor-based
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+status_page_note: >-
+  No public status page was found for gigstack (no status.gigstack.* host and
+  no status link on the marketing site as of 2026-07-19).

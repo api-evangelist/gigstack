@@ -1,0 +1,92 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.gigstack.io/apierrorcode-9263360d0
+docs: https://docs.gigstack.io/
+format: custom-envelope
+envelope:
+  message: human-readable message
+  error: one of the standardized error codes below
+note: >-
+  gigstack API v2 returns errors on a custom envelope ({message, error}) rather
+  than RFC 9457 problem+json. The `error` field carries one of 23 standardized
+  machine-readable codes, grouped by category below.
+error_codes:
+  - code: unauthorized
+    category: authentication
+    message: Authentication required
+  - code: forbidden
+    category: authorization
+    message: Access denied
+  - code: invalid_token
+    category: authentication
+    message: Token is invalid or expired
+  - code: validation_failed
+    category: validation
+    message: Request validation failed
+  - code: invalid_request_body
+    category: validation
+    message: Request body format invalid
+  - code: missing_required_field
+    category: validation
+    message: Required field missing
+  - code: invalid_field_value
+    category: validation
+    message: Field value invalid
+  - code: resource_not_found
+    category: resources
+    message: Requested resource not found
+  - code: resource_already_exists
+    category: resources
+    message: Resource already exists
+  - code: resource_conflict
+    category: resources
+    message: Resource conflict detected
+  - code: business_rule_violation
+    category: business-logic
+    message: Business logic violation
+  - code: operation_not_allowed
+    category: business-logic
+    message: Operation not permitted
+  - code: insufficient_permissions
+    category: authorization
+    message: User lacks required permissions
+  - code: external_service_error
+    category: external-services
+    message: External service unavailable
+  - code: payment_processor_error
+    category: external-services
+    message: Payment processor error
+  - code: cfdi_service_error
+    category: external-services
+    message: CFDI stamping service error
+  - code: internal_server_error
+    category: system
+    message: Internal server error occurred
+  - code: service_unavailable
+    category: system
+    message: Service temporarily unavailable
+  - code: rate_limit_exceeded
+    category: system
+    message: API rate limit exceeded
+  - code: database_error
+    category: data
+    message: Database operation failed
+  - code: data_integrity_error
+    category: data
+    message: Data integrity constraint violated
+  - code: file_not_found
+    category: file-operations
+    message: File not found
+  - code: file_upload_error
+    category: file-operations
+    message: File upload failed
+  - code: invalid_file_format
+    category: file-operations
+    message: Invalid file format
+cfdi_errors:
+  note: >-
+    CFDI stamping failures surface a dedicated CFDI error object (see
+    docs cfdierror data model and the List CFDI errors endpoint) carrying the
+    SAT/PAC rejection code and message in addition to the cfdi_service_error
+    envelope code.
+  docs: https://docs.gigstack.io/list-cfdi-errors-25854588e0

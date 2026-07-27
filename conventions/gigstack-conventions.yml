@@ -1,0 +1,67 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.gigstack.io/welcome-to-gigstack-api-1385870m0
+docs: https://docs.gigstack.io/
+base_url: https://api.gigstack.io/v2
+authentication:
+  style: bearer-jwt
+  header: 'Authorization: Bearer <JWT_TOKEN>'
+  ref: authentication/gigstack-authentication.yml
+idempotency:
+  supported: true
+  mechanism: request-parameter
+  key: idempotency_key
+  scope: payments
+  description: >-
+    Payment registration requests accept an `idempotency_key` so that retried
+    create-payment calls do not produce duplicate payments. Webhook consumers
+    are additionally instructed to de-duplicate using the event `id`.
+  docs: https://docs.gigstack.io/payments-api-guide-1385930m0
+pagination:
+  style: cursor
+  request_params: [starting_after, limit]
+  response_fields:
+    next: cursor for the next page
+    has_more: boolean, more results available
+    total_results: total count of matching results
+  note: >-
+    v2 uses cursor-based pagination (next / has_more / total_results). API v1
+    used offset/limit, migrated in v2.
+response_envelope:
+  success:
+    message: human-readable status string
+    data: the resource object or array
+  list:
+    message: human-readable status string
+    data: array of resource objects
+    next: cursor
+    has_more: boolean
+    total_results: integer
+  error:
+    message: human-readable message
+    error: machine-readable error code (see errors/gigstack-error-codes.yml)
+metadata:
+  livemode: >-
+    Boolean present on resources and webhook events indicating whether the
+    object was created with a live (true) or test (false) API key.
+request_tracing:
+  request_id_header: null
+  note: No documented request-id / trace header.
+versioning:
+  scheme: uri-path
+  current: v2
+  ref: lifecycle/gigstack-lifecycle.yml
+rate_limiting:
+  documented: false
+  error_code: rate_limit_exceeded
+  note: >-
+    A `rate_limit_exceeded` error code exists but the numeric limits and
+    rate-limit response headers are not published in the docs.
+webhooks:
+  supported: true
+  ref: asyncapi/gigstack-webhooks.yml
+cross_links:
+  errors: errors/gigstack-error-codes.yml
+  lifecycle: lifecycle/gigstack-lifecycle.yml
+  authentication: authentication/gigstack-authentication.yml
+  webhooks: asyncapi/gigstack-webhooks.yml

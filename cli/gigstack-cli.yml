@@ -1,0 +1,58 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/gigstack
+repo: https://github.com/disruptive-learning/gigstack-cli
+docs: https://docs.gigstack.io/
+name: gigstack
+version: '0.3.0'
+official: true
+install:
+  - npm install -g gigstack
+binary: gigstack
+authentication:
+  order:
+    - env: GIGSTACK_API_KEY
+    - profile: ~/.config/gigstack/credentials.json
+  storage_permissions: '0600'
+  commands:
+    - gigstack login
+    - gigstack login -k <api-key>
+    - gigstack login -k <key> -p <profile>
+    - gigstack logout
+    - gigstack whoami
+    - gigstack profiles
+    - gigstack switch <profile>
+command_groups:
+  account:
+    - gigstack login
+    - gigstack whoami
+    - gigstack doctor
+    - gigstack status
+    - gigstack profiles
+    - gigstack switch
+  resources:
+    - gigstack clients list
+    - gigstack invoices list
+    - gigstack payments
+    - gigstack receipts
+    - gigstack services
+  agent_context:
+    command: gigstack context
+    description: >-
+      Structured domain knowledge for AI agents (concepts, statuses,
+      relationships, actions).
+    topics: [payments, invoices, receipts, clients, cobranza, automations, services, webhooks]
+    usage:
+      - gigstack context
+      - gigstack context <topic>
+      - gigstack context <topic> --short
+      - gigstack context <topic> --json
+flags:
+  json: >-
+    Every command supports --json for structured, agent-parseable output;
+    list commands return paginated envelopes in JSON mode.
+  filters: [--from, --to]
+key_flows:
+  - Authenticate and manage multiple named profiles (production/staging)
+  - Create CFDI invoices and manage payments/clients/receipts from CI/CD
+  - Emit machine-readable domain context for agents

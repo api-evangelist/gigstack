@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.gigstack.io/welcome-to-gigstack-api-1385870m0
+docs: https://docs.gigstack.io/
+model: test-vs-live-key
+description: >-
+  gigstack does not run a separate sandbox host. Test and live operation is
+  distinguished by the API key: a test API key exercises the same base URL
+  (https://api.gigstack.io/v2) in non-production (test) mode. Resources and
+  webhook events carry a `livemode` boolean (false = test, true = live).
+base_url: https://api.gigstack.io/v2
+key_modes:
+  - mode: test
+    livemode: false
+    note: Test API key; objects created are test-mode and flagged livemode=false.
+  - mode: live
+    livemode: true
+    note: Production API key; objects are livemode=true.
+key_source: https://app.gigstack.pro/settings?subtab=api
+webhook_test_flag:
+  field: livemode
+  note: Webhook payloads include livemode so consumers can route test vs live events.
+test_values:
+  note: >-
+    No published magic test card numbers / test RFCs were found in the public
+    docs. CFDI stamping in test mode uses the PAC/SAT test environment behind
+    the scenes; specific test fixtures are not documented publicly. Not
+    fabricated here.

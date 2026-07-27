@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.gigstack.io/
+docs: https://docs.gigstack.io/
+note: >-
+  gigstack ships hosted, prebuilt end-user surfaces (not client-side JS element
+  libraries). These are launched/linked from the API via access tokens rather
+  than embedded as web components.
+components:
+  - family: self-invoice-portal
+    name: Portal de autofactura
+    kind: hosted-page
+    description: >-
+      Self-service portal where a merchant's end customers generate their own
+      CFDI invoice from a sale/receipt (autofactura), removing manual invoicing.
+    marketing: https://gigstack.pro/portal-de-autofactura.html
+  - family: customer-portal
+    name: Portal de clientes
+    kind: hosted-page
+    access: per-client access token
+    description: >-
+      Hosted customer portal where a client views and manages their invoices;
+      access is minted via the "Get client customer portal access token" API.
+    api: https://docs.gigstack.io/get-client-customer-portal-access-token-21625392e0
+    marketing: https://gigstack.pro/portal-de-clientes.html

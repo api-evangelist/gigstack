@@ -1,0 +1,53 @@
+generated: '2026-07-19'
+method: searched
+source: https://registry.npmjs.org/
+docs: https://docs.gigstack.io/
+note: >-
+  gigstack's public GitHub org is `disruptive-learning` (org display name
+  "gigstack"). It publishes a first-party CLI and an official MCP server on npm.
+  No traditional client SDK (language binding library) is published on npm,
+  PyPI, RubyGems, Packagist, NuGet, Maven, or crates.io as of 2026-07-19 —
+  hence no `SDKs` pointer is emitted.
+packages:
+  - language: javascript
+    registry: npm
+    name: gigstack
+    kind: cli
+    url: https://www.npmjs.com/package/gigstack
+    install: npm install -g gigstack
+    repo: https://github.com/disruptive-learning/gigstack-cli
+    version: 0.3.0
+    official: true
+    description: >-
+      gigstack CLI — create CFDI invoices, manage payments, clients and receipts
+      from the terminal or CI/CD. Ships an agent-oriented `context` command.
+  - language: javascript
+    registry: npm
+    name: mcp-gigstack
+    kind: mcp-server
+    url: https://www.npmjs.com/package/mcp-gigstack
+    install: npm install -g mcp-gigstack
+    version: 1.0.0
+    official: true
+    author: Jahziel Cabrera <jahziel.cabrera@gigstack.io>
+    description: MCP server for the gigstack API - Mexican invoice and payment automation.
+  - language: javascript
+    registry: npm
+    name: n8n-nodes-gigstack
+    kind: integration
+    url: https://www.npmjs.com/package/n8n-nodes-gigstack
+    aliases: ['@disruptive-learning/n8n-nodes-gigstack']
+    install: npm install n8n-nodes-gigstack
+    official: true
+    description: >-
+      n8n community node for the gigstack API (Mexican tax compliance, invoicing
+      and payment processing), published under the disruptive-learning (gigstack)
+      org.
+registries_checked:
+  npm: [gigstack, mcp-gigstack, n8n-nodes-gigstack]
+  pypi: none
+  rubygems: none
+  packagist: none
+  nuget: none
+  maven: none
+  crates: none

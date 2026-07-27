@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://www.npmjs.com/package/mcp-gigstack
+server:
+  name: mcp-gigstack
+  transport: stdio
+  package: mcp-gigstack
+  registry: npm
+  install: npm install -g mcp-gigstack
+  bin: mcp-gigstack
+  version: 1.0.0
+  official: true
+  author: Jahziel Cabrera <jahziel.cabrera@gigstack.io>
+  repo: https://github.com/disruptive-learning
+  api: https://api.gigstack.io/v2
+  description: >-
+    Official gigstack MCP server exposing the gigstack API (Mexican invoice and
+    payment automation - CFDI, payments, clients, receipts) to MCP-capable
+    agents. Published to npm by a gigstack.io maintainer.
+auth:
+  type: api-key
+  env: GIGSTACK_API_KEY
+  note: >-
+    Configured with a gigstack API token (Bearer JWT) via environment, mirroring
+    the gigstack CLI credential model.
+domains:
+  - clients
+  - services
+  - invoices
+  - payments
+  - receipts
+  - webhooks

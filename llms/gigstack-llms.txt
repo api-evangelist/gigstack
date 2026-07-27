@@ -1,0 +1,216 @@
+# gigstack API
+
+## Docs
+- [Welcome to gigstack API](https://docs.gigstack.io/welcome-to-gigstack-api-1385870m0.md): 
+- [gigstack Connect API Guide](https://docs.gigstack.io/gigstack-connect-api-guide-1390851m0.md): 
+- [Migrar de API v1 a v2 de gigstack](https://docs.gigstack.io/migrar-de-api-v1-a-v2-de-gigstack-1644235m0.md): 
+- Clients [Clients API Guide](https://docs.gigstack.io/clients-api-guide-1385925m0.md): 
+- Services [Services API Guide](https://docs.gigstack.io/services-api-guide-1385928m0.md): 
+- Invoices [Invoices API Guide](https://docs.gigstack.io/invoices-api-guide-1385929m0.md): 
+- Payments [Payments API Guide](https://docs.gigstack.io/payments-api-guide-1385930m0.md): 
+- Receipts [Receipts API Guide](https://docs.gigstack.io/receipts-api-guide-1404286m0.md): 
+- Teams [Teams API Guide](https://docs.gigstack.io/teams-api-guide-1385961m0.md): 
+- Users [Users API Guide](https://docs.gigstack.io/users-api-guide-1385963m0.md): 
+- Catalogs [Tax Regimes Catalog (Régimen Fiscal)](https://docs.gigstack.io/tax-regimes-catalog-r%C3%A9gimen-fiscal-1392912m0.md): 
+- Catalogs [Payment Forms | Formas de pago](https://docs.gigstack.io/payment-forms-formas-de-pago-1392913m0.md): 
+- Catalogs [CFDI Usage Catalog (Uso CFDI)](https://docs.gigstack.io/cfdi-usage-catalog-uso-cfdi-1392975m0.md): 
+- Catalogs [Payment Methods Catalog (Método de Pago)](https://docs.gigstack.io/payment-methods-catalog-m%C3%A9todo-de-pago-1393061m0.md): 
+- Catalogs [ Months and Bimesters Catalog (Meses y Bimestres)](https://docs.gigstack.io/-months-and-bimesters-catalog-meses-y-bimestres-1393256m0.md): 
+- Catalogs [Invoice Relationships Catalog (Relación entre Facturas)](https://docs.gigstack.io/invoice-relationships-catalog-relaci%C3%B3n-entre-facturas-1393284m0.md): 
+- Webhooks [Webhooks](https://docs.gigstack.io/webhooks-1862295m0.md): 
+- Retentions [Retentions ](https://docs.gigstack.io/retentions-2012533m0.md): 
+- Descarga Masiva SAT [Descarga Masiva](https://docs.gigstack.io/descarga-masiva-2063844m0.md): 
+
+## API Docs
+- Clients [List clients](https://docs.gigstack.io/list-clients-20352660e0.md): Retrieve a paginated list of clients with powerful filtering capabilities.
+- Clients [Get client](https://docs.gigstack.io/get-client-20352662e0.md): Retrieve a specific client by ID.
+- Clients [Update client](https://docs.gigstack.io/update-client-20352663e0.md): Update an existing client.
+- Clients [Create client](https://docs.gigstack.io/create-client-20352661e0.md): Create a new client with fiscal information for Mexican tax compliance.
+- Clients [Validate client fiscal information](https://docs.gigstack.io/validate-client-fiscal-information-20352665e0.md): Validate client's fiscal information against SAT.
+- Clients [Get client customer portal access token](https://docs.gigstack.io/get-client-customer-portal-access-token-21625392e0.md): Generate a secure access token for client customer portal.
+- Clients [Stamp pending receipts](https://docs.gigstack.io/stamp-pending-receipts-20352667e0.md): Stamp all pending receipts for a client.
+- Clients [Delete client](https://docs.gigstack.io/delete-client-20352664e0.md): Delete a specific client.
+- Clients [Search clients](https://docs.gigstack.io/search-clients-29768770e0.md): Full-text search across clients using Typesense. Provides fast, typo-tolerant search capabilities.
+- Clients [Upload CSF PDF to create or update client](https://docs.gigstack.io/upload-csf-pdf-to-create-or-update-client-24485403e0.md): Upload a CSF (Constancia de Situación Fiscal) PDF file from SAT to automatically extract fiscal information and create a new client or update an existing one.
+- Clients [Upload support document](https://docs.gigstack.io/upload-support-document-28014931e0.md): Upload a supporting document (contract, proof of delivery, etc.) for a client.
+- Clients [List support documents](https://docs.gigstack.io/list-support-documents-28014932e0.md): Retrieve all supporting documents attached to a client.
+- Services [List services](https://docs.gigstack.io/list-services-20352668e0.md): Retrieve a paginated list of services.
+- Services [Get service](https://docs.gigstack.io/get-service-20352670e0.md): Retrieve a specific service by ID.
+- Services [Update service](https://docs.gigstack.io/update-service-20352671e0.md): Update an existing service.
+- Services [Create service](https://docs.gigstack.io/create-service-20352669e0.md): Create a new service.
+- Services [Delete service](https://docs.gigstack.io/delete-service-20352672e0.md): Delete a specific service.
+- Invoices > Income [List income invoices](https://docs.gigstack.io/list-income-invoices-20352673e0.md): Retrieve a paginated list of income invoices with powerful filtering capabilities.
+- Invoices > Income [Create income invoice](https://docs.gigstack.io/create-income-invoice-20352674e0.md): Create a new income invoice with CFDI 4.0 compliance.
+- Invoices > Income [Get income invoice](https://docs.gigstack.io/get-income-invoice-20352675e0.md): Retrieve a specific income invoice by ID.
+- Invoices > Egress [List egress invoices](https://docs.gigstack.io/list-egress-invoices-20793823e0.md): Retrieve a paginated list of egress invoices with powerful filtering capabilities.
+- Invoices > Egress [Create egress invoice](https://docs.gigstack.io/create-egress-invoice-20793824e0.md): Create a new egress invoice (expense/credit note) with CFDI 4.0 compliance.
+- Invoices > Egress [Get egress invoice](https://docs.gigstack.io/get-egress-invoice-20793825e0.md): Retrieve a specific egress invoice by ID.
+- Invoices > Drafts [Create draft invoice (pre-factura)](https://docs.gigstack.io/create-draft-invoice-pre-factura-30478226e0.md): Create a new draft invoice (pre-factura) that can be edited and stamped later.
+- Invoices > Drafts [Stamp draft invoice (finalize)](https://docs.gigstack.io/stamp-draft-invoice-finalize-30478230e0.md): Stamp (finalize) a draft invoice into a valid CFDI with SAT.
+- Invoices > Drafts [Generate draft preview PDF (pre-factura)](https://docs.gigstack.io/generate-draft-preview-pdf-pre-factura-30478231e0.md): Generate a preview PDF for a draft invoice with a **"Sin Validez Fiscal"** watermark.
+- Invoices > Drafts [Delete draft invoice](https://docs.gigstack.io/delete-draft-invoice-30478229e0.md): Permanently delete a draft invoice. This also removes any generated preview files.
+- Invoices > Drafts [Update draft invoice](https://docs.gigstack.io/update-draft-invoice-30478228e0.md): Update an existing draft invoice with new data. Supports partial updates — only send the fields you want to change.
+- Invoices > Drafts [Get draft invoice](https://docs.gigstack.io/get-draft-invoice-30478227e0.md): Retrieve a specific draft invoice by ID. Includes the preview PDF (base64) if one has been generated.
+- Invoices > Drafts [List draft invoices](https://docs.gigstack.io/list-draft-invoices-30478225e0.md): Retrieve a paginated list of draft invoices (pre-facturas).
+- Invoices [List CFDI errors](https://docs.gigstack.io/list-cfdi-errors-25854588e0.md): Retrieve a paginated and filterable list of CFDI errors from the error matrix.
+- Invoices [List payment complement invoices](https://docs.gigstack.io/list-payment-complement-invoices-23506401e0.md): Retrieve a paginated list of payment complement invoices (CFDI type P - Complemento de Pago).
+- Invoices [Get payment complement invoice](https://docs.gigstack.io/get-payment-complement-invoice-23506402e0.md): Retrieve a specific payment complement invoice by ID (CFDI type P - Complemento de Pago).
+- Invoices [Get invoice files](https://docs.gigstack.io/get-invoice-files-20352676e0.md): Get XML and PDF files for an invoice.
+- Invoices [Upload support document](https://docs.gigstack.io/upload-support-document-28014933e0.md): Upload a supporting document (contract, proof of delivery, etc.) for an invoice.
+- Invoices [List support documents](https://docs.gigstack.io/list-support-documents-28014934e0.md): Retrieve all supporting documents attached to an invoice.
+- Invoices [Cancel invoice](https://docs.gigstack.io/cancel-invoice-20352677e0.md): Cancel a specific invoice with SAT.
+- Invoices [Search invoices](https://docs.gigstack.io/search-invoices-29768771e0.md): Full-text search across invoices using Typesense. Provides fast, typo-tolerant search capabilities.
+- Invoices [List SAT invoices](https://docs.gigstack.io/list-sat-invoices-32452829e0.md): Returns invoices downloaded from SAT via Descarga Masiva. Supports filtering by direction,
+- Invoices [Get a SAT invoice](https://docs.gigstack.io/get-a-sat-invoice-32452830e0.md): Returns a single invoice downloaded from SAT by its UUID.
+- Invoices [Retry XML download](https://docs.gigstack.io/retry-xml-download-32452831e0.md): Manually retry the XML download for a received SAT invoice stuck in processing or error state.
+- Invoices [Generate PDF for a received SAT invoice](https://docs.gigstack.io/generate-pdf-for-a-received-sat-invoice-32452832e0.md): Generates a PDF from the stored XML of a received SAT invoice.
+- Invoices [Resend invoice email](https://docs.gigstack.io/resend-invoice-email-33958086e0.md): Resend an invoice email (PDF + XML attachments) to the client and/or additional recipients.
+- Payments [List payments](https://docs.gigstack.io/list-payments-20352678e0.md): Retrieve a paginated list of payments with powerful filtering capabilities.
+- Payments [Get payment](https://docs.gigstack.io/get-payment-20352679e0.md): Retrieve a specific payment by ID.
+- Payments [Request payment](https://docs.gigstack.io/request-payment-20352681e0.md): Create a payment request that creates a payment in 'requires_payment_method' status.
+- Payments [Register payment](https://docs.gigstack.io/register-payment-20352682e0.md): Register a payment with optional automation for invoice creation.
+- Payments [Mark payment as paid](https://docs.gigstack.io/mark-payment-as-paid-20352683e0.md): Mark a payment as paid with the specified payment form.
+- Payments [Refund payment](https://docs.gigstack.io/refund-payment-20352684e0.md): Refund a payment with a specified reason and amount.
+- Payments [Cancel payment](https://docs.gigstack.io/cancel-payment-20352680e0.md): Cancel a specific payment.
+- Payments [Search payments](https://docs.gigstack.io/search-payments-25791638e0.md): Full-text search across payments using Typesense. Provides fast, typo-tolerant search capabilities.
+- Payments [Update payment](https://docs.gigstack.io/update-payment-34569173e0.md): Update a payment. The endpoint supports modifying the `description` of items, attaching `automation_type` to a payment that has no automations, and patching the embedded `client` (with the change propagated to the `/clients/{id}` master record). The body must include at least one of `items`, `automation_type` or `client`.
+- Payments [Upload support document](https://docs.gigstack.io/upload-support-document-28014935e0.md): Upload a supporting document (contract, proof of delivery, etc.) for a payment.
+- Payments [List support documents](https://docs.gigstack.io/list-support-documents-28014936e0.md): Retrieve all supporting documents attached to a payment.
+- Receipts [List receipts](https://docs.gigstack.io/list-receipts-20504786e0.md): Retrieve a paginated list of receipts.
+- Receipts [Get receipt](https://docs.gigstack.io/get-receipt-20504788e0.md): Retrieve a specific receipt by ID.
+- Receipts [Create receipt](https://docs.gigstack.io/create-receipt-20504787e0.md): Create a new receipt with items and client information. Receipts are pre-invoice documents
+- Receipts [Stamp receipt](https://docs.gigstack.io/stamp-receipt-20504790e0.md): Convert a receipt into a CFDI invoice by stamping it with SAT.
+- Receipts [Cancel receipt](https://docs.gigstack.io/cancel-receipt-20504789e0.md): Cancel a receipt. This action cannot be undone.
+- Receipts [Search receipts](https://docs.gigstack.io/search-receipts-29768772e0.md): Full-text search across receipts using Typesense. Provides fast, typo-tolerant search capabilities.
+- Teams [List teams](https://docs.gigstack.io/list-teams-20352685e0.md): Retrieve a paginated list of teams.
+- Teams [Get team](https://docs.gigstack.io/get-team-20352687e0.md): Retrieve a specific team by ID.
+- Teams [Get team integrations](https://docs.gigstack.io/get-team-integrations-20352689e0.md): Get available integrations for teams.
+- Teams [Get team series](https://docs.gigstack.io/get-team-series-20352692e0.md): Get series for a team.
+- Teams [Get team onboarding URL](https://docs.gigstack.io/get-team-onboarding-url-20462248e0.md): Generate a secure onboarding URL for team setup and configuration.
+- Teams [Update team](https://docs.gigstack.io/update-team-20352688e0.md): Update an existing team.
+- Teams [Update team series](https://docs.gigstack.io/update-team-series-20352694e0.md): Update a team series.
+- Teams [Update team settings](https://docs.gigstack.io/update-team-settings-20352695e0.md): Update team settings including defaults for invoicing, taxes, series, and email configurations.
+- Teams [Create team](https://docs.gigstack.io/create-team-20352686e0.md): Create a new team.
+- Teams [Add team member](https://docs.gigstack.io/add-team-member-20352690e0.md): Add a member to a team.
+- Teams [Remove team member](https://docs.gigstack.io/remove-team-member-20352691e0.md): Remove a member from a team.
+- Teams [Create team series](https://docs.gigstack.io/create-team-series-20352693e0.md): Create a series for a team.
+- Teams [Delete team](https://docs.gigstack.io/delete-team-34064730e0.md): Schedule a team for deletion (soft delete).
+- Teams [Upload SAT CSD certificates](https://docs.gigstack.io/upload-sat-csd-certificates-24733147e0.md): Upload SAT CSD (Certificado de Sello Digital) certificates to establish SAT connection for CFDI invoicing.
+- Teams [Sign manifest document](https://docs.gigstack.io/sign-manifest-document-26526733e0.md): Signs a manifest document (Carta Manifiesto) using the FIEL (Firma Electrónica Avanzada) for SAT compliance.
+- Users [List users](https://docs.gigstack.io/list-users-20352696e0.md): Retrieve a paginated list of users.
+- Users [Get user](https://docs.gigstack.io/get-user-20352698e0.md): Retrieve a specific user by ID.
+- Users [Update user](https://docs.gigstack.io/update-user-20352699e0.md): Update an existing user.
+- Users [Create user](https://docs.gigstack.io/create-user-20352697e0.md): Create a new user.
+- Users [Reset user password](https://docs.gigstack.io/reset-user-password-20352700e0.md): Reset a user's password.
+- Users [Generate login link](https://docs.gigstack.io/generate-login-link-24832690e0.md): Generate a login link for a user. The link contains a custom Firebase token that allows the user to authenticate directly.
+- Webhooks [List webhooks](https://docs.gigstack.io/list-webhooks-25590325e0.md): Retrieve all configured webhooks for your team.
+- Webhooks [Create webhook](https://docs.gigstack.io/create-webhook-25590326e0.md): Create a new webhook endpoint to receive event notifications.
+- Webhooks [Get webhook](https://docs.gigstack.io/get-webhook-25590327e0.md): Retrieve details of a specific webhook by ID.
+- Webhooks [Update webhook](https://docs.gigstack.io/update-webhook-25590328e0.md): Update an existing webhook's configuration. All fields are optional.
+- Webhooks [Delete webhook](https://docs.gigstack.io/delete-webhook-25590329e0.md): Permanently delete a webhook endpoint.
+- Retentions [List retentions](https://docs.gigstack.io/list-retentions-29880639e0.md): Retrieve a paginated list of tax retention documents (CFDI Retenciones 2.0).
+- Retentions [Create retention](https://docs.gigstack.io/create-retention-29880640e0.md): Create and stamp a new tax retention document (CFDI Retenciones 2.0).
+- Retentions [Get retention](https://docs.gigstack.io/get-retention-29880641e0.md): Retrieve a specific tax retention document by ID (UUID).
+- Retentions [Cancel retention](https://docs.gigstack.io/cancel-retention-29880642e0.md): Cancel a stamped tax retention document with the SAT.
+- Retentions [Get retention files](https://docs.gigstack.io/get-retention-files-29880643e0.md): Retrieve PDF and/or XML files for a stamped tax retention document.
+- Descarga Masiva SAT [Check activation status](https://docs.gigstack.io/check-activation-status-32396697e0.md): Check whether Descarga Masiva SAT is activated for your team and what action (if any) is required.
+- Descarga Masiva SAT [Activate Descarga Masiva SAT](https://docs.gigstack.io/activate-descarga-masiva-sat-32396698e0.md): Activate Descarga Masiva SAT for your team. Billing is adjusted automatically based on your plan:
+- Descarga Masiva SAT [Deactivate Descarga Masiva SAT](https://docs.gigstack.io/deactivate-descarga-masiva-sat-32396699e0.md): Deactivate Descarga Masiva SAT for your team. Scheduled downloads stop immediately. If the feature was billed as an add-on, the charge is removed from your subscription (prorated). Any remaining XML downloads in the current period are still billed at period end.
+- Descarga Masiva SAT [Upload FIEL credentials](https://docs.gigstack.io/upload-fiel-credentials-32396700e0.md): Upload your FIEL (Firma Electrónica Avanzada) credentials to enable SAT bulk downloads.
+- Descarga Masiva SAT [Register business with SAT (manual)](https://docs.gigstack.io/register-business-with-sat-manual-32396701e0.md): Manually register your business with the SAT. Only needed if the automatic registration during `POST /invoices/download/fiel` failed.
+- Descarga Masiva SAT [Get schedule configuration](https://docs.gigstack.io/get-schedule-configuration-32396702e0.md): Returns the current scheduled download configuration plus FIEL and registration status. Use this to check setup progress before configuring a schedule or submitting download requests.
+- Descarga Masiva SAT [Save schedule configuration](https://docs.gigstack.io/save-schedule-configuration-32396703e0.md): Create or update the daily scheduled download. The schedule runs once per day at the specified time (America/Mexico_City timezone) and downloads invoices from the last `days_back` days.
+- Descarga Masiva SAT [Get download request history](https://docs.gigstack.io/get-download-request-history-32396704e0.md): Returns the last 20 download requests for your team, ordered by most recent first.
+- Descarga Masiva SAT [Create bulk download request](https://docs.gigstack.io/create-bulk-download-request-32396705e0.md): Submit a bulk download request to the SAT. The SAT processes these asynchronously — use `GET /invoices/download/schedule/history` to poll for status updates.
+- Descarga Masiva SAT [Check download request status](https://docs.gigstack.io/check-download-request-status-32396706e0.md): Check the current SAT processing status of a specific download request.
+- Descarga Masiva SAT [Download XML package](https://docs.gigstack.io/download-xml-package-32396707e0.md): Download a ZIP package containing the XML files for a completed download request.
+- Descarga Masiva SAT [Get single invoice from SAT](https://docs.gigstack.io/get-single-invoice-from-sat-32396708e0.md): Fetch a single invoice's XML from the SAT by UUID. Useful for retrieving a specific CFDI without submitting a full bulk download request.
+- Descarga Masiva SAT [Debug registration status](https://docs.gigstack.io/debug-registration-status-32396709e0.md): Returns detailed debug information about your team's Descarga Masiva setup: FIEL status, registration status, schedule config, and SAT connectivity. Intended for troubleshooting.
+- Descarga Masiva SAT [Enable SAT sync](https://docs.gigstack.io/enable-sat-sync-32396710e0.md): Enables automatic SAT synchronization for your team. This is a lower-level toggle — in most flows the schedule configuration (`PUT /invoices/download/schedule`) is the right endpoint to use.
+- Auth [Headless signup (API-only path)](https://docs.gigstack.io/headless-signup-api-only-path-36372521e0.md): Create a complete gigstack account end-to-end without the alphav2 web UI.
+- Auth [Health check](https://docs.gigstack.io/health-check-36372522e0.md): Returns 200 if the auth endpoint is reachable. No auth required.
+- SAT Lists [List SAT lists and sync status](https://docs.gigstack.io/list-sat-lists-and-sync-status-39959228e0.md): Returns every SAT list definition tracked by gigstack, together with the metadata from its most recent sync.
+- SAT Lists [Check an RFC against the SAT lists](https://docs.gigstack.io/check-an-rfc-against-the-sat-lists-39959229e0.md): Checks whether an RFC appears on any of the SAT lists gigstack tracks, and returns every matching entry.
+- [Apidog connectivity test](https://docs.gigstack.io/apidog-connectivity-test-33963279e0.md): 
+
+## Schemas
+- Schemas [ApiResponse](https://docs.gigstack.io/apiresponse-8865400d0.md): 
+- Schemas [Category](https://docs.gigstack.io/category-8865401d0.md): 
+- Schemas [Pet](https://docs.gigstack.io/pet-8865402d0.md): 
+- Schemas [Tag](https://docs.gigstack.io/tag-8865403d0.md): 
+- Schemas [Order](https://docs.gigstack.io/order-8865404d0.md): 
+- Schemas [StandardizedSuccessResponse](https://docs.gigstack.io/standardizedsuccessresponse-9263358d0.md): 
+- Schemas [StandardizedErrorResponse](https://docs.gigstack.io/standardizederrorresponse-9263359d0.md): 
+- Schemas [ApiErrorCode](https://docs.gigstack.io/apierrorcode-9263360d0.md): 
+- RequestBodies [UserArray](https://docs.gigstack.io/userarray-8865405d0.md): 
+- [SatInvoice](https://docs.gigstack.io/satinvoice-14021399d0.md): 
+- [OrderDirection](https://docs.gigstack.io/orderdirection-9004237d0.md): 
+- [ListQueryParams](https://docs.gigstack.io/listqueryparams-9004239d0.md): 
+- [DateRangeFilter](https://docs.gigstack.io/daterangefilter-9004238d0.md): 
+- [PaginationMeta](https://docs.gigstack.io/paginationmeta-9004240d0.md): 
+- [ApiPublicClient](https://docs.gigstack.io/apipublicclient-8817973d0.md): 
+- [Client](https://docs.gigstack.io/client-8789485d0.md): 
+- [ApiPublicService](https://docs.gigstack.io/apipublicservice-8817974d0.md): 
+- [Service](https://docs.gigstack.io/service-8789486d0.md): 
+- [ClientInput](https://docs.gigstack.io/clientinput-8789487d0.md): 
+- [ServiceInput](https://docs.gigstack.io/serviceinput-8789488d0.md): 
+- [PendingReceiptsSummary](https://docs.gigstack.io/pendingreceiptssummary-15170883d0.md): 
+- [CfdiError](https://docs.gigstack.io/cfdierror-11777902d0.md): 
+- [Invoice](https://docs.gigstack.io/invoice-8789489d0.md): 
+- [InvoiceIncomeInput](https://docs.gigstack.io/invoiceincomeinput-8789490d0.md): 
+- [InvoiceEgressInput](https://docs.gigstack.io/invoiceegressinput-9001346d0.md): 
+- [DraftInvoiceInput](https://docs.gigstack.io/draftinvoiceinput-13433894d0.md): 
+- [InvoiceInput](https://docs.gigstack.io/invoiceinput-8840503d0.md): 
+- [PaymentItem](https://docs.gigstack.io/paymentitem-8817975d0.md): 
+- [DraftInvoiceUpdateInput](https://docs.gigstack.io/draftinvoiceupdateinput-13433895d0.md): 
+- [PaymentAllowedMethod](https://docs.gigstack.io/paymentallowedmethod-8817976d0.md): 
+- [DraftInvoiceOutput](https://docs.gigstack.io/draftinvoiceoutput-13433896d0.md): 
+- [ApiPublicPaymentProcessorDetails](https://docs.gigstack.io/apipublicpaymentprocessordetails-8817977d0.md): 
+- [ApiPublicPayment](https://docs.gigstack.io/apipublicpayment-8817978d0.md): 
+- [Payment](https://docs.gigstack.io/payment-8789491d0.md): 
+- [PaymentInput](https://docs.gigstack.io/paymentinput-8789492d0.md): 
+- [RequestPaymentInput](https://docs.gigstack.io/requestpaymentinput-8820424d0.md): 
+- [RegisterPaymentInput](https://docs.gigstack.io/registerpaymentinput-8820425d0.md): 
+- [RefundPaymentInput](https://docs.gigstack.io/refundpaymentinput-8842844d0.md): 
+- [MarkPaymentAsPaidInput](https://docs.gigstack.io/markpaymentaspaidinput-8842845d0.md): 
+- [ApiPublicIncomeInvoice](https://docs.gigstack.io/apipublicincomeinvoice-8840504d0.md): 
+- [ApiPublicTeam](https://docs.gigstack.io/apipublicteam-8840505d0.md): 
+- [ApiPublicUser](https://docs.gigstack.io/apipublicuser-8840506d0.md): 
+- [ApiPublicWebhook](https://docs.gigstack.io/apipublicwebhook-11635150d0.md): 
+- [WebhookInput](https://docs.gigstack.io/webhookinput-11635151d0.md): 
+- [WebhookUpdateInput](https://docs.gigstack.io/webhookupdateinput-11635152d0.md): 
+- [UpdatePaymentInput](https://docs.gigstack.io/updatepaymentinput-14659134d0.md): 
+- [Team](https://docs.gigstack.io/team-8789493d0.md): 
+- [TeamInput](https://docs.gigstack.io/teaminput-8789494d0.md): 
+- [TeamSettingsInput](https://docs.gigstack.io/teamsettingsinput-8817740d0.md): 
+- [TeamSettings](https://docs.gigstack.io/teamsettings-8840507d0.md): 
+- [User](https://docs.gigstack.io/user-8789495d0.md): 
+- [UserInput](https://docs.gigstack.io/userinput-8789496d0.md): 
+- [SeriesInput](https://docs.gigstack.io/seriesinput-8840508d0.md): 
+- [Series](https://docs.gigstack.io/series-8840509d0.md): 
+- [ReceiptInput](https://docs.gigstack.io/receiptinput-8840510d0.md): 
+- [ApiPublicSearch](https://docs.gigstack.io/apipublicsearch-8817979d0.md): 
+- [ApiPublicThirdParty](https://docs.gigstack.io/apipublicthirdparty-8817980d0.md): 
+- [ApiPublicInvoiceConfig](https://docs.gigstack.io/apipublicinvoiceconfig-8817981d0.md): 
+- [ApiPublicRefund](https://docs.gigstack.io/apipublicrefund-8817982d0.md): 
+- [ApiPublicAutomations](https://docs.gigstack.io/apipublicautomations-8817983d0.md): 
+- [TaxElement](https://docs.gigstack.io/taxelement-8817984d0.md): 
+- [ClientAddress](https://docs.gigstack.io/clientaddress-8789497d0.md): 
+- [TaxSchema](https://docs.gigstack.io/taxschema-8789498d0.md): 
+- [StandardSuccessResponse](https://docs.gigstack.io/standardsuccessresponse-8789499d0.md): 
+- [ListResponse](https://docs.gigstack.io/listresponse-8789500d0.md): 
+- [ErrorResponse](https://docs.gigstack.io/errorresponse-8789501d0.md): 
+- [TeamTaxDefault](https://docs.gigstack.io/teamtaxdefault-16119638d0.md): 
+- [ValidationErrorResponse](https://docs.gigstack.io/validationerrorresponse-8789502d0.md): 
+- [UnauthorizedError](https://docs.gigstack.io/unauthorizederror-8789503d0.md): 
+- [NotFoundError](https://docs.gigstack.io/notfounderror-8789504d0.md): 
+- [InternalServerError](https://docs.gigstack.io/internalservererror-8789505d0.md): 
+- [BadRequestError](https://docs.gigstack.io/badrequesterror-16411336d0.md): 
+- [SatListDefinition](https://docs.gigstack.io/satlistdefinition-16411337d0.md): 
+- [SatListRfcCheck](https://docs.gigstack.io/satlistrfccheck-16411338d0.md): 
+- [PaymentMethodEnum](https://docs.gigstack.io/paymentmethodenum-8840511d0.md): 
+- [PaymentFormEnum](https://docs.gigstack.io/paymentformenum-8840512d0.md): 
+- [AutomationTypeEnum](https://docs.gigstack.io/automationtypeenum-8840513d0.md): 
+- [ItemSchema](https://docs.gigstack.io/itemschema-8840514d0.md): 
+- [SATDocument](https://docs.gigstack.io/satdocument-12882127d0.md): 
+- [UploadSupportDocumentInput](https://docs.gigstack.io/uploadsupportdocumentinput-12882128d0.md): 
