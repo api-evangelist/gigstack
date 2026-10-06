@@ -47,7 +47,7 @@ accessModel:
 specificationVersion: '0.23'
 image: https://gigstack.pro/images/webclip.png
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-10-06'
 x-docs-platform: redoc
 x-docs-platform-confidence: medium
 x-docs-platform-checked: 2026-10-03
@@ -98,6 +98,8 @@ apis:
   - type: LLMsTxt
     url: llms/gigstack-llms.txt
 common:
+- url: https://blog.gigstack.pro/rss.xml
+  type: BlogRSS
 - type: DomainSecurity
   url: security/gigstack-domain-security.yml
 - type: Website
